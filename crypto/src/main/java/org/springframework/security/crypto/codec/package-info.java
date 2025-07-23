@@ -17,4 +17,7 @@
 /**
  * Internal codec classes. Only intended for use within the framework.
  */
+@NullMarked
 package org.springframework.security.crypto.codec;
+
+import org.jspecify.annotations.NullMarked;

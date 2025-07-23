@@ -40,6 +40,9 @@ public final class Utf8 {
 	 * Get the bytes of the String in UTF-8 encoded form.
 	 */
 	public static byte[] encode(CharSequence string) {
+		if (string == null) {
+			throw new IllegalArgumentException("String cannot be null");
+		}
 		try {
 			ByteBuffer bytes = CHARSET.newEncoder().encode(CharBuffer.wrap(string));
 			byte[] bytesCopy = new byte[bytes.limit()];
